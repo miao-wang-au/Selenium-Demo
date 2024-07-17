@@ -39,8 +39,6 @@ class Login:
         )
         self.driver.find_element(By.XPATH, "//button[@data-testid='selectSupplier13']").click()
 
-        WebDriverWait(self.driver, 5)
-
         self.driver.find_element(By.XPATH, "//*[contains(text(), 'Submit')]").click()  # The only way that has worked so far
 
         WebDriverWait(self.driver, 5).until(
@@ -61,7 +59,7 @@ class Login:
 # driver.maximize_window()
 # driver.get("https://aims-sisk-ui-test.aga.rbxd.ds/login")
 #
-# Login("Hospital Theater")
+# Login("Hospital Theater", driver)
 # driver.find_element(By.XPATH, "(//button[@title='Account settings'])[1]").click()
 # driver.find_element(By.XPATH, "(//li[normalize-space()='Logout'])[1]").click()
 #
